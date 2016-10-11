@@ -8,15 +8,15 @@ from twilio.rest import TwilioRestClient
 
 # Google Translate
 base_url = 'https://www.googleapis.com/language/translate/v2'
-google_api_key = '?key=AIzaSyCV2x3FzeEIMa0T4HWjWIBKv8r-T1ZhZCk'
+google_api_key = '?key=enter-key-here'
 source = "&source=en"
 target = "&target="
 
 # Twilio
-account = "AC31f69e42c332863b928d3f36cb879962"
-token = "381b9823f3e445a9343488ef9a5e0c14"
+account = "enter-key-here"
+token = "enter-key-here"
 client = TwilioRestClient(account, token)
-phone_number_from = "+12052367720"
+phone_number_from = "+1enter-number-here"
 
 
 def translateAndSend(text, language, number):

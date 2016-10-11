@@ -5,13 +5,13 @@ try:  # Python 2
 except:  # Python 3
     import urllib.parse as urllib
 from twilio.rest import TwilioRestClient
-account = "AC31f69e42c332863b928d3f36cb879962"
-token = "381b9823f3e445a9343488ef9a5e0c14"
+account = "enter-key-here"
+token = "enter-key-here"
 
 # Google Translate
 BASE_URL = 'https://www.googleapis.com/language/translate/v2'
 ATTACH_KEY = '?key='
-GOOGLE_API_KEY = 'AIzaSyCV2x3FzeEIMa0T4HWjWIBKv8r-T1ZhZCk'
+GOOGLE_API_KEY = 'enter-key-here'
 URL_SOURCE = '&source=en'
 ATTACH_TARGET = '&target='
 ATTACH_QUERY = '&q='
@@ -54,8 +54,8 @@ def sendText(text, number):
         stringToReturn = text
     message = client.messages.create(
         to='+1' + number,
-        from_='+12052367720',
+        from_='+1enter-number-here',
         body=stringToReturn
     )
 
-sendText(translate(['hi how are you','it is lit','come through'], 'es'), '2242467230')
+sendText(translate(['hi how are you','it is lit','come through'], 'es'), 'enter-number-here')

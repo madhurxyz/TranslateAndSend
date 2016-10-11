@@ -3,11 +3,11 @@ import urllib
 import json
 
 from twilio.rest import TwilioRestClient
-account_sid = "AC31f69e42c332863b928d3f36cb879962" # Your Account SID from www.twilio.com/console
-auth_token  = "381b9823f3e445a9343488ef9a5e0c14"  # Your Auth Token from www.twilio.com/console
+account_sid = "enter-key-here" # Your Account SID from www.twilio.com/console
+auth_token  = "enter-key-here"  # Your Auth Token from www.twilio.com/console
 
 TRANSLATE_URL = "https://www.googleapis.com/language/translate/v2?key="
-GOOGLE_API_KEY = "AIzaSyCV2x3FzeEIMa0T4HWjWIBKv8r-T1ZhZCk"
+GOOGLE_API_KEY = "enter-key-here"
 TRANSLATE_SOURCE = "&source=en"
 TRANSLATE_TARGET = "&target="
 TRANSLATE_TEXT = "&q="
@@ -26,7 +26,7 @@ def sendText(text, number):
     message = client.messages.create(
         body = textToSend,
         to = "+1" + number,    # Replace with your phone number
-        from_ = "+12052367720") # Replace with your Twilio number
+        from_ = "+enter-number-here") # Replace with your Twilio number
         # print(message.sid)
 
 def translate(text, language):
@@ -51,5 +51,5 @@ def translateString(text, language):
     except Exception as e:
         return "translation failed with no JSON response"
 
-sendText(translate('it is lit', 'es'), "2242467230")
-sendText(translate(["here is a word", "another set of words", "here are more words"], 'de'), "2242467230")
+sendText(translate('it is lit', 'es'), "enter-number-here")
+sendText(translate(["here is a word", "another set of words", "here are more words"], 'de'), "enter-number-here")
